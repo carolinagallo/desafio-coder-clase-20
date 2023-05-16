@@ -33,8 +33,8 @@ app.use("/api/carts", cartsRouter);
 app.use(
   session({
     store: mongoStore.create({
-      mongoUrl:
-        "mongodb+srv://Owner:BHu1dTrxC6yXV86l@cluster-prueba.qioqqnl.mongodb.net/Prueba?retryWrites=true&w=majority",
+      mongoUrl: "ACA VA EL STRING DE CONEXION",
+
       ttl: 1000,
     }),
     secret: "123123123",
@@ -63,8 +63,6 @@ socketServer.on("connection", (socket) => {
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://Owner:BHu1dTrxC6yXV86l@cluster-prueba.qioqqnl.mongodb.net/Prueba?retryWrites=true&w=majority"
-  )
+  .connect("ACA VA EL STRING DE CONEXION")
   .then(() => console.log("se conecto a la db"))
   .catch((error) => console.log(error));
